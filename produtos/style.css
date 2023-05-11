@@ -239,6 +239,13 @@ td, th{
 
 .imagem-beneficios {
   width: 60%;
+  opacity: 1;
+  transition: 400ms;
+  box-shadow: 10px 10px 10px 0 black;
+}
+
+.imagem-beneficios:hover{
+  opacity: 0.3;
 }
 
 .video {
@@ -246,18 +253,21 @@ td, th{
   margin: 2em auto;
 }
 
-/* main > p {
-  background-color: red;
-}
+@media screen and (max-width: 400px) {
+  .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .produtos, .produtos li{
+    width: auto;
+  }
 
-img + p {
-  background-color: blue;
-}
+  h1 {
+    text-align: center;
+  }
 
-img ~ p {
-  background-color: yellow;
-}
+  nav {
+    position: static;
+  }
 
-.principal p:not(#missao) {
-  background: orange;
-} */
+  .lista-beneficios, .imagem-beneficios{
+    width: 100%;
+  }
+
+}
